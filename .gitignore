@@ -1,0 +1,8 @@
+.idea/
+/nbproject/
+*.bak
+conig/parameters.php
+uploads/*
+admin/node_modules/
+Troc Jouets Brief 3
+_DS_Store

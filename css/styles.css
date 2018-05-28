@@ -1,0 +1,582 @@
+                      /* Informations
+TROC JOUETS - Digital Campus Rennes
+Webdesign:	Véronique ENOUf
+Version: responsive
+*/
+                    /* Couleurs
+orange:    #ee6741 / rgb(238,103,65)
+vert:      #a0a847 / rgb(160,168,71)
+jaune:     #e5c921 / rgb(259,201,33)
+bleu:      #9ac2b1 / rgb(154,194,177)
+rose:      #f2d0ca / rgb(242,208,202)
+gris foncé:#333333 / rgb(51,51,51)
+gris clair:#666666 / rgb(102,102,102)
+*/
+                    /* ==============================
+              BASE
+================================= */
+
+                    html {
+                      font-size: 100%;
+                      font-family: 'Pompiere', 'Trebuchet MS', sans-serif;
+                    }
+
+                    body {
+                      margin: 0;
+                    }
+
+                    *, *::after, *::before {
+                      box-sizing: border-box;
+                    }
+
+                    .container {
+                      max-width: 1026px;
+                      margin: 0 auto;
+                      padding: 0 15px;
+                    }
+                    /* ============================
+            COMMUNS
+============================ */
+
+                    a {
+                      text-decoration: none;
+                      color: #333333;
+                    }
+
+                    a:hover {
+                      text-decoration: none;
+                      color: #f2d0ca;
+                    }
+
+                    ul {
+                      list-style: none;
+                      margin: 0;
+                      padding: 0;
+                    }
+
+                    .titre {
+                      display: flex;
+                      justify-content: center;
+                    }
+
+                    h2 {
+                      font-size: 1.3rem;
+                      font-weight: normal;
+                      text-transform: uppercase;
+                      color: #333333;
+                      border-bottom: 1px solid #a0a847;
+                      padding: 15px 0;
+                      border-top: 1px solid #a0a847;
+                      margin-top: 30px;
+                    }
+
+                    .titre-mini {
+                      display: flex;
+                      justify-content: center;
+                    }
+
+                    h3 {
+                      font-size: 1.125rem;
+                      font-weight: normal;
+                      text-transform: uppercase;
+                      color: #333333;
+                      text-align: center;
+                      border-bottom: solid 1px #333333;
+                      padding: 10px 0 15px 0;
+                    }
+
+                    h4 {
+                      font-size: 1rem;
+                      font-weight: normal;
+                      text-transform: uppercase;
+                      color: #9ac2b1;
+                      text-align: center;
+                    }
+
+                    p {
+                      color: #666666;
+                      text-align: center;
+                      font-size: 1.125rem;
+                    }
+
+                    img {
+                      display: block;
+                      max-width: 100%;
+                      height: auto;
+                    }
+
+                    .hidden-text {
+                      font-size: 0;
+                      margin: 0;
+                    }
+
+                    .picto {
+                      width: 100px;
+                      height: 100px;
+                    }
+
+                    .more {
+                      display: inline-block;
+                      font-size: 1.3rem;
+                      text-transform: uppercase;
+                      background-color: #a0a847;
+                      padding: 15px 15px 10px 15px;
+                      color: #ffffff;
+                    }
+                    /* =======================================
+   		      HEADER
+======================================= */
+                    /*============Top Nav=====================*/
+
+                    #top-nav {
+                      background-color: #a0a847;
+                    }
+
+                    .top-nav {
+                      display: flex;
+                      flex-wrap: wrap;
+                      justify-content: space-between;
+                    }
+                    /*=============RS===========*/
+
+                    .social-nav ul {
+                      display: flex;
+                    }
+
+                    .social-nav ul li {
+                      margin: 0.5rem;
+                    }
+
+                    .social-nav ul li a {
+                      font-size: 0;
+                      color: #fff;
+                      transition: 0.3s;
+                    }
+
+                    .social-nav ul li a:hover, a:focus {
+                      color: #f2d0ca;
+                    }
+
+                    .fa {
+                      font-size: 2.5rem;
+                    }
+
+                    .nav-left {
+                      display: none;
+                    }
+                    /*========Lien Se connecter=======*/
+
+                    .connect-top {
+                      display: flex;
+                      align-items: center;
+                    }
+
+                    .connect-top a {
+                      color: #ffffff;
+                      font-size: 1.3rem;
+                      text-transform: uppercase;
+                      font-weight: normal;
+                    }
+
+                    .connect-top a:hover, a:focus {
+                      color: #f2d0ca;
+                      transition: 0.3s;
+                    }
+                    /*======Liens Membres/Rechercher======*/
+
+                    .nav-right ul {
+                      display: flex;
+                      padding-top: 5px;
+                    }
+
+                    .nav-right ul li {
+                      vertical-align: bottom;
+                      margin: 0.5rem;
+                    }
+
+                    .nav-right ul li a {
+                      font-size: 0;
+                      color: #fffff;
+                      display: block;
+                      width: 30px;
+                      height: 30px;
+                      background-size: cover;
+                    }
+
+                    .nav-right ul li a.recherche {
+                      background-image: url('../images/icon-recherche.png');
+                    }
+
+                    .nav-right ul li a.compte {
+                      background-image: url('../images/icon-compte.png');
+                    }
+                    /*============Logo=====================*/
+
+                    .logo {}
+
+                    #logo {
+                      margin-top: 10px;
+                    }
+
+                    #logo a {
+                      display: block;
+                    }
+
+                    #logo img {
+                      max-width: 525px;
+                      margin: 0 auto;
+                    }
+                    /*============Navigation principale===========#*/
+
+                    #main-nav {
+                      position: relative;
+                      background-color: #f2d0ca
+                    }
+
+                    #menu-icon {
+                      margin: 0 auto;
+                      width: 40px;
+                      background-color: #f2d0ca;
+                    }
+
+                    #main-nav ul {
+                      display: none;
+                      position: absolute;
+                      width: 100%;
+                      z-index: 9999;
+                      background-color: #f2d0ca;
+                    }
+
+                    #main-nav:hover ul {
+                      display: block;
+                    }
+
+                    #main-nav ul a {
+                      font-size: 1.3rem;
+                      color: #ffffff;
+                      text-transform: uppercase;
+                      display: block;
+                      padding: 0.675rem;
+                    }
+
+                    #main-nav ul a:hover {
+                      color: #666666;
+                    }
+                    /* ============================
+          MAIN
+============================ */
+                    /*======Section illustration========*/
+
+                    #illustration {
+                      padding-top: 10px;
+                    }
+
+                    #illustration img {
+                      padding-left: 40px;
+                      margin: 0 auto;
+                    }
+                    /*========Section nouveaux jouets========*/
+
+                    .titre-mini a h3:hover {
+                      color: #f2d0ca
+                    }
+
+                    .info-miniature a p:hover {
+                      color: #f2d0ca
+                    }
+
+                    .owl-carousel .owl-stage {
+                      display: flex;
+                    }
+
+                    .item {
+                      max-width: 320px;
+                      height: 100%;
+                      display: flex;
+                      flex-direction: column;
+                    }
+
+                    .item p {
+                      margin: 0;
+                      padding: 0 10px;
+                    }
+
+                    .item .more {
+                      align-self: center;
+                      margin-top: auto;
+                    }
+
+                    .owl-carousel .owl-item .miniature img {
+                      max-height: 250px;
+                      max-width: 100%;
+                      width: auto;
+                      margin: 0 auto;
+                    }
+
+                    .info-miniature {
+                      display: flex;
+                      justify-content: center;
+                      text-transform: uppercase;
+                      padding: 10px 0;
+                    }
+
+                    .owl-nav>div {
+                      position: absolute;
+                      top: 8rem;
+                      font-size: 0;
+                    }
+
+                    .owl-nav>div.owl-prev {
+                      left: 0.5rem;
+                    }
+
+                    .owl-prev::before {
+                      content: '\f053';
+                      font-family: FontAwesome;
+                      font-size: 2rem;
+                      color: #666666;
+                      padding: 0.25rem;
+                    }
+
+                    .owl-nav>div.owl-next {
+                      right: 0.5rem;
+                    }
+
+                    .owl-next::before {
+                      content: '\f054';
+                      font-family: FontAwesome;
+                      font-size: 2rem;
+                      color: #666666;
+                      padding: 0.25rem;
+                    }
+                    /*========Section livres BDs========*/
+                    /*========Section actualités========*/
+
+                    .rs-partage {
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center;
+                      padding: 0 10px;
+                    }
+
+                    .social-nav-partage ul li a {
+                      font-size: 0;
+                      color: #333333;
+                      transition: 0.3s;
+                    }
+
+                    .social-nav-partage ul li a:hover, a:focus {
+                      color: #666666;
+                    }
+
+                    .social-nav-partage .fa {
+                      font-size: 1.75rem;
+                    }
+                    /*========Section communauté========*/
+
+                    .inscription {
+                      display: flex;
+                      flex-direction: column;
+                      padding-bottom: 20px;
+                    }
+
+                    .inscription .more {
+                      align-self: center;
+                      margin-top: auto;
+                      color: #ffffff;
+                    }
+                    /*========Section charte========*/
+
+                    #charte {
+                      padding-bottom: 20px;
+                    }
+
+                    .charte {
+                      display: flex;
+                      flex-direction: column;
+                      align-items: center;
+                      padding: 0 20px;
+                    }
+
+                    .charte h3 {
+                      border: none;
+                    }
+                    /* ============================
+            FOOTER
+============================ */
+
+                    .footer {
+                      background-color: #a0a847;
+                    }
+                    /*======Newsletter=======
+*/
+
+                    #newsletter {
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center;
+                      padding: 10px 10px 40px 10px;
+                    }
+
+                    #newsletter h3 {
+                      border: none;
+                      color: #ffffff;
+                      margin: 0;
+                    }
+
+                    .form form input, .form form button {
+                      display: block;
+                      border: none;
+                      background-color: #fff;
+                      color: #666666;
+                      font-family: 'Pompiere', 'Trebuchet MS', sans-serif;
+                      text-transform: uppercase;
+                    }
+
+                    .form form input::placeholder {
+                      color: #666666;
+                      font-size: 1.125rem;
+                    }
+
+                    .form form input {
+                      margin-bottom: 10px;
+                      padding-right: 80px;
+                      padding-left: 10px;
+                      padding-bottom: 5px;
+                      padding-top: 10px
+                    }
+
+                    .form form button {
+                      padding: 4px 10px;
+                      margin-top: 10px;
+                      font-size: 1.125rem;
+                    }
+                    /*=======RS==========*/
+
+                    #rs {
+                      display: flex;
+                      flex-direction: column;
+                      align-items: center;
+                      padding: 10px 0 30px 0;
+                      border-top: 1px solid #ffffff;
+                    }
+                    /*==========Navigation footer=========*/
+
+                    #footer-nav {
+                      border-top: 1px solid #ffffff;
+                      border-bottom: 1px solid #ffffff;
+                      padding: 20px;
+                    }
+
+                    #footer-nav ul {
+                      display: flex;
+                      justify-content: space-around;
+                      align-items: center;
+                    }
+
+                    #footer-nav ul a {
+                      font-size: 1rem;
+                      font-weight: normal;
+                      text-transform: uppercase;
+                      color: #ffffff;
+                    }
+
+                    .texte-rs p {
+                      color: #ffffff;
+                      font-size: 1.33rem
+                    }
+
+                    .footer p {
+                      padding: 5px 0;
+                    }
+                    /* =======================================
+   		      MEDIA QUERIES
+======================================= */
+
+                    @media all and (min-width: 640px) {
+                      h2 {
+                        font-size: 2.25rem;
+                        margin-top: 50px;
+                      }
+                      h4 {
+                        font-size: 1.3rem;
+                        padding-left: 500px;
+                      }
+                      .fa {
+                        font-size: 3.5rem;
+                      }
+                      #logo {
+                        margin-top: 30px;
+                      }
+                      .nav-left {
+                        display: block;
+                      }
+                      #illustration {
+                        padding-top: 50px;
+                      }
+                      .item-charte {
+                        display: flex;
+                        justify-content: center;
+                      }
+                      #newsletter {
+                        justify-content: space-around;
+                        padding-top: 30px;
+                      }
+                      #rs {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-around;
+                      }
+                    }
+
+                    @media all and (min-width: 961px) {
+                      .nav-right ul li a {
+                        width: 40px;
+                        height: 40px;
+                      }
+                      #menu-icon {
+                        display: none;
+                      }
+                      #main-nav ul, #main-nav:hover ul {
+                        position: static;
+                        display: flex;
+                        flex-flow: row wrap;
+                        justify-content: space-between;
+                        background-color: transparent;
+                      }
+                      #main-nav ul a {
+                        color: #333333;
+                        margin: 0;
+                      }
+                      #main-nav ul a:hover {
+                        color: #ffffff;
+                      }
+                      #logo {
+                        margin-top: 40px;
+                      }
+                      #illustration {
+                        padding-top: 80px;
+                      }
+                      #rs {
+                        justify-content: space-between;
+                      }
+                      /*=======Page connection inscription=========*/
+                      #connection-inscription {
+                        padding-top: 60px;
+                      }
+                      #connection-inscription h2 {
+                        color: #ff8800;
+                        text-align: center;
+                        margin-top: 0;
+                        margin-bottom: 0;
+                      }
+                      #connection-inscription-form {
+                        border-bottom: 1px solid #a0a847;
+                        padding-top: 70px;
+                        display: flex;
+                        justify-content: space-between;
+                        color: #ee6741;
+                        font-size: 1.5rem;
+                        text-align: center;
+                        padding-bottom: 50px;
+                      }
