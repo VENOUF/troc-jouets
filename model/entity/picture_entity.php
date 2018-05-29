@@ -1,12 +1,12 @@
 <?php
 
-function getAllPicturesByProject(int $id) {
+function getAllPicturesByToy(int $id) {
     /* @var $connection PDO */
     global $connection;
 
     $query = "SELECT *
-            FROM project_picture
-            WHERE project_id = :id;";
+            FROM toy_picture
+            WHERE toy_id = :id;";
 
     $stmt = $connection->prepare($query);
     $stmt->bindParam(":id", $id);
