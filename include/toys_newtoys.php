@@ -1,6 +1,8 @@
 <div class="item">
     <div class="miniature">
-        <a class="more" href="jouet.php?id=<?php echo $toy["id"]; ?>"><img src="uploads/<?php echo $toy["picture"]; ?>" alt="<?php echo $toy["title"]; ?>"></a>
+        <a href="jouet.php?id=<?php echo $toy["id"]; ?>">
+            <img src="uploads/<?php echo $toy["picture"]; ?>" alt="<?php echo $toy["title"]; ?>">
+        </a>
     </div>
     <div class="titre-mini">
         <a href="jouet.php?id=<?php echo $toy["id"]; ?>">

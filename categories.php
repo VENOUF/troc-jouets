@@ -5,7 +5,7 @@ require_once 'model/database.php';
 // Déclaration des variables
 $list_categories = getAllEntity("category");
 
-getHeader("Jouets par catégories");
+getHeader("Catégories de jouets");
 ?>
 
 <section id="categories">
@@ -19,7 +19,7 @@ getHeader("Jouets par catégories");
 
         <?php foreach ($list_categories as $category) : ?>
 
-            <li><a href="#" title=""><?php echo $category["label"]; ?></a></li>
+        <li><a href="categorie.php?id=<?php echo $category["id"]; ?>" title=""><?php echo $category["label"]; ?></a></li>
 
         <?php endforeach; ?>
 
