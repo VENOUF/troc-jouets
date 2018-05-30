@@ -11,11 +11,11 @@
     </div>
     <p><?php echo $toy["description"]; ?></p>
     <div class="info-miniature">
-        <a href="troqueur">
-            <p>Julie</p>
+        <a href="<?php echo $toy["title"]; ?>">
+            <p><?php echo $toy["firstname"]; ?></p>
         </a>
         <a href="lieu.html">
-            <p>22</p>
+            <p><?php echo $toy["codepost"]; ?></p>
         </a>
        
     </div>

@@ -64,17 +64,23 @@ function getOneToy(int $id) {
     return $stmt->fetch();
 }
 
-function getAllBooks(int $id) {
+function getAllBooks(int $limit) {
     /* @var $connection PDO */
     global $connection;
 
-    $query = "SELECT *
+    $query = "SELECT
+                toy.*,
+                user.firstname,
+                user.lastname,
+                CONCAT(user.firstname, ' ', user.lastname) AS fullname,
+                user.codepost
             FROM toy
-    WHERE category_id = 3";
-
-
+            LEFT JOIN user ON user.id = toy.user_id
+            WHERE category_id = 3
+            LIMIT :limit;";
+    
     $stmt = $connection->prepare($query);
-    $stmt->bindParam(":id", $id);
+    $stmt->bindParam(":limit", $limit, PDO::PARAM_INT);
     $stmt->execute();
 
     return $stmt->fetchAll();
