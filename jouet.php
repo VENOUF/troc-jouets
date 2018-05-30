@@ -11,10 +11,6 @@ $id = $_GET["id"];
 
 $toy = getOneToy($id);
 
-
-//$fullname = getOneUser($user["lastname"]);
-
-//$list_users = getAllUsersByToy($id);
 $list_pictures = getAllPicturesByToy($id);
 
 $list_toys = getAllToysByCategory($toy["category_id"], $id, 2);

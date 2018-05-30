@@ -5,6 +5,7 @@ require_once 'model/database.php';
 // Déclaration des variables
 
 $list_toys = getAllToys(3);
+$list_books = getAllBooks(3);
 
 
 getHeader("Accueil");
@@ -31,7 +32,7 @@ getHeader("Accueil");
 
     <div class="owl-carousel owl-theme">
 
-        <!--  Premier item du carousel nouveaux jouets mis dans  include/toys_newtoys -->
+        <!--  Premiere boucle newtoys -->
 
         <?php foreach ($list_toys as $toy) : ?>
             <?php include 'include/toys_newtoys.php'; ?>
@@ -41,92 +42,27 @@ getHeader("Accueil");
     </div>
 </section>
 
+
 <!--  Section livres jeunesse à troquer   -->
 
 <section id="book" class="container">
+
     <div class="titre">
         <h2>Des livres jeunesse, des BDs à troquer</h2>
     </div>
 
-
-
     <div class="owl-carousel owl-theme">
-        <div class="item">
-            <div class="miniature">
-                <img src="./images/livre-faceties-chats.jpg" alt="Facécies de chats">
-            </div>
-            <div class="titre-mini">
-                <h3>Facécies de chats</h3>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, adipisci.</p>
-            <div class="info-miniature">
-                <p>Sophie</p>
-                <p>29</p>
-            </div>
-            <a class="more" href="#">En savoir plus</a>
-        </div>
 
-        <div class="item">
-            <div class="miniature">
-                <img src="./images/bd-paracuellos.jpg" alt="paracuellos"> </div>
-            <div class="titre-mini">
-                <h3>Paracuellos</h3>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, deserunt.</p>
-            <div class="info-miniature">
-                <p>Sophie</p>
-                <p>29</p>
-            </div>
-            <a class="more" href="#">En savoir plus</a>
-        </div>
-        <div class="item">
-            <div class="miniature">
-                <img src="./images/livre-contes-macabres.jpg" alt="Les contes macabres">
-            </div>
-            <div class="titre-mini">
-                <h3>Les contes macabres</h3>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            <div class="info-miniature">
-                <p>Julie</p>
-                <p>29</p>
-            </div>
-            <a class="more" href="#">En savoir plus</a>
-        </div>
-        <div class="item">
-            <div class="miniature">
-                <img src="./images/livre-notre-dame-de-paris.jpg" alt="Notre dame de Paris">
-            </div>
-            <div class="titre-mini">
-                <h3>Notre Dame de Paris</h3>
-            </div>
-            <p>Magnifique livre illustré par Benjamin Lacombe. Tome 1 rare, fera le bonheur d'un collectonneur.</p>
-            <div class="info-miniature">
-                <p>Fred</p>
-                <p>29</p>
-            </div>
-            <a class="more" href="#">En savoir plus</a>
-        </div>
-        <div class="item">
-            <div class="miniature">
-                <img src="./images/livre-tetine-nina.jpg" alt="La tétine de Nina">
-            </div>
-            <div class="titre-mini">
-                <h3>La tétine de Nina</h3>
-            </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-            <div class="info-miniature">
-                <p>Isabelle</p>
-                <p>35</p>
-            </div>
-            <a class="more" href="#">En savoir plus</a>
-        </div>
+         <!--  Deuxieme boucle newbooks -->
 
+        <?php foreach ($list_books as $toy) : ?>
+            <?php include 'include/toys_newbooks.php'; ?>
+        <?php endforeach; ?>
+       
 
     </div>
-
-
 </section>
+
 
 
 

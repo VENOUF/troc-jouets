@@ -63,3 +63,19 @@ function getOneToy(int $id) {
 
     return $stmt->fetch();
 }
+
+function getAllBooks(int $id) {
+    /* @var $connection PDO */
+    global $connection;
+
+    $query = "SELECT *
+            FROM toy
+    WHERE category_id = 3";
+
+
+    $stmt = $connection->prepare($query);
+    $stmt->bindParam(":id", $id);
+    $stmt->execute();
+
+    return $stmt->fetchAll();
+}

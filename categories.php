@@ -8,18 +8,17 @@ $list_categories = getAllEntity("category");
 getHeader("Catégories de jouets");
 ?>
 
-<section id="categories">
-
-    <h2>Jouets à troquer par catégories</h2>
+<section  class="container" id="categories">
 
 
+    <h2>Les catégories</h2>
 
-    <div class="container">
-        <label for="category">Catégorie</label>
+
+    <div>
 
         <?php foreach ($list_categories as $category) : ?>
 
-        <li><a href="categorie.php?id=<?php echo $category["id"]; ?>" title=""><?php echo $category["label"]; ?></a></li>
+            <li><a href="categorie.php?id=<?php echo $category["id"]; ?>" title=""><?php echo $category["label"]; ?></a></li>
 
         <?php endforeach; ?>
 

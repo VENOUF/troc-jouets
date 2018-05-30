@@ -51,7 +51,12 @@
 
 
         <div class="connect-top">
-          <a href="connection.php" class="connection">Se connecter</a>
+                 <?php if (!isset($utilisateur["id"])) : ?>
+           <a href="connection.php" class="connection">Login</a>
+        <?php else: ?>
+            <a href="#">Mon Compte</a>
+        <?php endif; ?>
+      
         </div>
 
 

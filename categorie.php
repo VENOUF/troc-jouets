@@ -15,13 +15,13 @@ $list_toys = getAllToysByCategory($id);
 getHeader("Jouets par catégories");
 ?>
 
-<section id="categorie">
+<section id="categorie" class="container">
 
     <h2>Jouets à troquer par catégories</h2>
 
 
 
-    <div class="container">
+    <div>
         <label for="category"><?php echo $category["label"]; ?></label>
 
         <?php foreach ($list_toys as $toy) : ?>

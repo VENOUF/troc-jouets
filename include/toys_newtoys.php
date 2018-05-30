@@ -9,7 +9,7 @@
             <h3><?php echo $toy["title"]; ?></h3>
         </a>
     </div>
-    <p>Jolie cuisinière en bois Moulin Roty</p>
+    <p><?php echo $toy["description"]; ?></p>
     <div class="info-miniature">
         <a href="troqueur">
             <p>Julie</p>

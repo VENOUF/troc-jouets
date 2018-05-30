@@ -1,4 +1,8 @@
 <?php
+// connection user
+if (!isset($_SESSION)) {
+    session_start();
+}
 
 /**
  * Debugger une variable
@@ -13,6 +17,14 @@ function debug($var, bool $die= true){
     if ($die){
         die;
     }
+}
+
+
+function currentUser() {
+    if (isset($_SESSION["id"])) {
+        return getOneUser($_SESSION["id"]);
+    }
+    return null;
 }
 
 
