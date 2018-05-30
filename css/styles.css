@@ -102,7 +102,7 @@ p {
 img {
     display: block;
     max-width: 100%;
-    height: auto;
+    max-height: 400px;
 }
 
 .hidden-text {
@@ -402,6 +402,41 @@ MAIN
 
 .charte h3 {
     border: none;
+}
+
+/* ============================
+PAGE CATEGORIES de jouets
+============================ */
+
+#categories {
+    margin-bottom: 40px;
+}
+
+#categories li a {
+    text-transform: uppercase;
+}
+
+
+
+/* ============================
+PAGE jouets par CATEGORIE
+============================ */
+
+#categorie {
+    margin-bottom: 40px;
+}
+
+#categorie label {
+color: rgb(160,168,71);
+    text-transform: uppercase;
+    font-size: 1.75rem;
+}
+#categorie li a {
+    text-transform: uppercase;
+}
+
+.label {
+    margin: 40px;
 }
 /* ============================
 FOOTER

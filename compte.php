@@ -3,7 +3,9 @@ require_once 'lib/functions.php';
 require_once 'model/database.php';
 
 // Déclaration des variables
+$utilisateur = currentUser();
 
+$list_toys = getAllToysByUser($utilisateur["id"]);
 
 getHeader("Accueil");
 

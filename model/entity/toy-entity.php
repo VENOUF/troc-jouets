@@ -53,6 +53,7 @@ function getOneToy(int $id) {
     global $connection;
 
     $query = "SELECT *
+       
             FROM toy
     WHERE toy.id = :id";
 
@@ -85,3 +86,47 @@ function getAllBooks(int $limit) {
 
     return $stmt->fetchAll();
 }
+
+
+function insertToy(string $title, string $description, string $picture, int $user_id, int $category_id) {
+    /* @var $connection PDO */
+    global $connection;
+
+    $query = "INSERT INTO toy (title, description, picture, creation_date, user_id, category_id)
+                VALUES (:title, :description, :picture, NOW(), :user_id, :category_id);";
+
+    $stmt = $connection->prepare($query);
+    $stmt->bindParam(":title", $title);
+    $stmt->bindParam(":description", $description);
+    $stmt->bindParam(":picture", $picture);
+    $stmt->bindParam(":user_id", $user_id);
+    $stmt->bindParam(":category_id", $category_id);
+    $stmt->execute();
+}
+
+
+function getAllToysByUser(int $limit) {
+    /* @var $connection PDO */
+    global $connection;
+
+    $query = "SELECT
+                toy.*,
+                user.id,
+                user.firstname,
+                user.lastname,
+                CONCAT(user.firstname, ' ', user.lastname) AS fullname,
+                user.codepost
+            FROM toy
+            LEFT JOIN user ON user.id = toy.user_id
+            LIMIT :limit;";
+       
+         
+       
+
+    $stmt = $connection->prepare($query);
+    $stmt->bindParam(":limit", $limit, PDO::PARAM_INT);
+    $stmt->execute();
+
+    return $stmt->fetchAll();
+}
+

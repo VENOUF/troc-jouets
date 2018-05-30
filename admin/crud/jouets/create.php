@@ -21,18 +21,12 @@ require_once '../../layout/header.php';
         <label for="description">Description</label>
         <textarea name="description" id="description" class="form-control"></textarea>
     </div>
+  
     <div class="form-group">
-        <label for="price">Prix</label>
-        <input type="number" id="price" name="price" class="form-control">
+        <label for="creation_date">Date de début</label>
+        <input type="date" id="creation_date" name="creation_date" class="form-control">
     </div>
-    <div class="form-group">
-        <label for="date_start">Date de début</label>
-        <input type="date" id="date_start" name="date_start" class="form-control">
-    </div>
-    <div class="form-group">
-        <label for="date_end">Date de fin</label>
-        <input type="date" id="date_end" name="date_end" class="form-control">
-    </div>
+    
     <div class="form-group">
         <label for="category">Catégorie</label>
         <select id="category" name="category_id" class="form-control">

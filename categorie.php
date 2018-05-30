@@ -22,7 +22,10 @@ getHeader("Jouets par catégories");
 
 
     <div>
+        
+        <div class="label">
         <label for="category"><?php echo $category["label"]; ?></label>
+        </div>
 
         <?php foreach ($list_toys as $toy) : ?>
 

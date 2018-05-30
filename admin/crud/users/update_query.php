@@ -3,14 +3,12 @@
 require_once '../../../model/database.php';
 
 // Récupérer les données du formulaire
-$title = $_POST["title"];
-$description = $_POST["description"];
-$price = $_POST["price"];
-$date_start = $_POST["date_start"];
-$date_end = $_POST["date_end"];
-$category_id = $_POST["category_id"];
+$id = $_POST["id"];
+$firstname = $_POST["firstname"];
+$lastname = $_POST["lastname"];
 
-$picture = "";
+$user = getOneEntity("user", $id);
+$picture = !is_null($user["picture"]) ? $user["picture"] : ""; // Image présente avant update
 
 // Vérifier si l'utilisateur a uploadé un fichier
 if ($_FILES["picture"]["error"] == 0) {
@@ -20,7 +18,7 @@ if ($_FILES["picture"]["error"] == 0) {
 }
 
 // Insertion des données en BDD
-insertProject($title, $picture, $description, $price, $date_start, $date_end, $category_id);
+updateUser($id, $firstname, $lastname, $picture);
 
 // Redirection vers la liste
 header("Location: index.php");
