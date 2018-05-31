@@ -6,7 +6,7 @@ $list_categories = getAllEntity("category");
 require_once '../../layout/header.php';
 ?>
 
-<h1>Nouveau projet</h1>
+<h1>Nouveau jouet</h1>
 
 <form action="create_query.php" method="post" enctype="multipart/form-data">
     <div class="form-group">

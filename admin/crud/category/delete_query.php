@@ -4,4 +4,4 @@ require_once '../../../model/database.php';
 
 $id = $_GET["id"];
 
-deleteEntity("toy", $id);
+deleteEntity("category", $id);

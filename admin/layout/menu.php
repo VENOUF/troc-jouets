@@ -13,8 +13,15 @@
     </li>
     <li class="nav-item">
         <a class="nav-link" href="<?php echo ADMIN_URL; ?>crud/jouets/">
-            <i class="fa fa-briefcase"></i>
+            <i class="fa fa fa-bicycle"></i>
             Jouets
+        </a>
+    </li>
+    
+        <li class="nav-item">
+        <a class="nav-link" href="<?php echo ADMIN_URL; ?>crud/category/">
+            <i class="fa fa fa-list"></i>
+            Catégories
         </a>
     </li>
 </ul>

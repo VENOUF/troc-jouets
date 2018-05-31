@@ -1,5 +1,5 @@
 <?php
-
+require_once '../../security.php';
 require_once '../../../model/database.php';
 
 // Récupérer les données du formulaire
@@ -18,7 +18,7 @@ if ($_FILES["picture"]["error"] == 0) {
 }
 
 // Insertion des données en BDD
-insertToy($title, $picture, $description, $creation_date, $category_id);
+insertToy($title, $description, $picture, $utilisateur["id"], $category_id);
 
 // Redirection vers la liste
 header("Location: index.php");

@@ -149,3 +149,15 @@ function getAllToysByUser(int $limit) {
     return $stmt->fetchAll();
 }
 
+function insertCategory(string $label) {
+    /* @var $connection PDO */
+    global $connection;
+
+    $query = "INSERT INTO category (label)
+                VALUES (:label);";
+
+    $stmt = $connection->prepare($query);
+    $stmt->bindParam(":label", $label);
+ 
+    $stmt->execute();
+}
