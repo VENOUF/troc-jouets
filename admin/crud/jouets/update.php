@@ -17,6 +17,7 @@ require_once '../../layout/header.php';
     <div class="form-group">
         <label for="description">Description</label>
         <input type="text" id="description" name="description" value="<?php echo $toy["description"]; ?>" class="form-control">
+        
     </div>
     <div class="form-group">
         <label for="picture">Photo</label>

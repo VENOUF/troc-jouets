@@ -105,6 +105,25 @@ function insertToy(string $title, string $description, string $picture, int $use
 }
 
 
+function updateToy(int $id, string $title, string $description, string $picture) {
+    /* @var $connection PDO */
+    global $connection;
+
+    $query = "UPDATE toy
+                SET title = :title,
+                description = :description,
+                picture = :picture
+            WHERE id = :id;";
+
+    $stmt = $connection->prepare($query);
+    $stmt->bindParam(":id", $id);
+    $stmt->bindParam(":title", $title);
+    $stmt->bindParam(":description", $description);
+    $stmt->bindParam(":picture", $picture);
+    $stmt->execute();
+}
+
+
 function getAllToysByUser(int $limit) {
     /* @var $connection PDO */
     global $connection;
