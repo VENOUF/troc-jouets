@@ -17,3 +17,7 @@ define("ADMIN_URL", SITE_URL . "admin/");
 3. Installer les packages npm dans l'admin:
         cd admin/
         npm intall
+
+
+
+

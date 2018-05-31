@@ -4,9 +4,9 @@ require_once 'model/database.php';
 
 // Déclaration des variables
 
-$list_toys = getAllToys(3);
-$list_books = getAllBooks(3);
-$list_news = getAllNews(3);
+$list_toys = getAllToys(100);
+$list_books = getAllBooks(100);
+$list_news = getAllNews(100);
 
 getHeader("Accueil");
 ?>

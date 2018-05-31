@@ -22,7 +22,7 @@ getHeader($toy["title"]);
     
     <h2><?php echo $toy["title"]; ?></h2>
     <p>Date de mise en ligne : <?php echo $toy["creation_date"]; ?></p>
-    <p>Nom du troqueur : <?php echo $toy["user_id"]; ?></p>
+    <p>Nom du troqueur : <?php echo $toy["firstname"]; ?></p>
     
     
     <img src="uploads/<?php echo $toy["picture"]; ?>" alt="<?php echo $toy["title"]; ?>">
@@ -42,7 +42,7 @@ getHeader($toy["title"]);
     
     <?php foreach ($list_toys as $toys) : ?>
     <h3><?php echo $toys["title"]; ?></h3>
-    <img src="uploads/<?php echo $toys["picture"]; ?>" alt="<?php echo $toys["title"]; ?>">
+    <a href="jouet.php?id=<?php echo $toy["id"]; ?>"><img src="uploads/<?php echo $toys["picture"]; ?>" alt="<?php echo $toys["title"]; ?>"></a>
     <?php endforeach; ?>
     
 </section>

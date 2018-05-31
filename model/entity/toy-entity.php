@@ -48,14 +48,20 @@ function getAllToysByCategory(int $category_id, int $id = 0, int $limit = 999) {
     return $stmt->fetchAll();
 }
 
+
+
+// function getonetoy avec user firstname
 function getOneToy(int $id) {
     /* @var $connection PDO */
     global $connection;
 
-    $query = "SELECT *
-       
+    $query = "SELECT 
+         toy.*,
+         DATE_FORMAT(toy.creation_date, '%d-%m-%Y') AS creation_date,
+         user.firstname
             FROM toy
-    WHERE toy.id = :id";
+             LEFT JOIN user ON user.id = toy.user_id
+    WHERE toy.id = :id;";
 
 
     $stmt = $connection->prepare($query);
@@ -64,6 +70,7 @@ function getOneToy(int $id) {
 
     return $stmt->fetch();
 }
+
 
 function getAllBooks(int $limit) {
     /* @var $connection PDO */
@@ -159,5 +166,19 @@ function insertCategory(string $label) {
     $stmt = $connection->prepare($query);
     $stmt->bindParam(":label", $label);
  
+    $stmt->execute();
+}
+
+function updateCategory(int $id, string $label) {
+    /* @var $connection PDO */
+    global $connection;
+
+    $query = "UPDATE category
+                SET label = :label,
+            WHERE id = :id;";
+
+    $stmt = $connection->prepare($query);
+    $stmt->bindParam(":id", $id);
+    $stmt->bindParam(":label", $label);
     $stmt->execute();
 }
