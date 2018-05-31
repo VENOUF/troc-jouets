@@ -608,6 +608,11 @@ FOOTER
         margin-top: 0;
         margin-bottom: 0;
     }
+    
+    
+    #connection-inscription label, #connection-inscription form{
+        margin-left: 50px;
+    }
     #connection-inscription-form {
         border-bottom: 1px solid #a0a847;
         padding-top: 70px;
